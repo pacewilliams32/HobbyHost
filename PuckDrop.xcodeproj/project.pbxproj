@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		DF52861D28171A320059C80F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF52861C28171A320059C80F /* AppDelegate.swift */; };
 		DF52861F28171A320059C80F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF52861E28171A320059C80F /* SceneDelegate.swift */; };
-		DF52862128171A320059C80F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF52862028171A320059C80F /* ViewController.swift */; };
+		DF52862128171A320059C80F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF52862028171A320059C80F /* LoginViewController.swift */; };
 		DF52862428171A320059C80F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF52862228171A320059C80F /* Main.storyboard */; };
 		DF52862628171A390059C80F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF52862528171A390059C80F /* Assets.xcassets */; };
 		DF52862928171A390059C80F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF52862728171A390059C80F /* LaunchScreen.storyboard */; };
+		DF75061328171E4500FB35D8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DF75061228171E4500FB35D8 /* GoogleService-Info.plist */; };
+		DFD22CDEC0FA049B42D5CB4F /* Pods_PuckDrop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC62D9832B261A39B6191A8 /* Pods_PuckDrop.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1CEC8CA03BA0778E0F8861E9 /* Pods-PuckDrop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PuckDrop.release.xcconfig"; path = "Target Support Files/Pods-PuckDrop/Pods-PuckDrop.release.xcconfig"; sourceTree = "<group>"; };
+		8DC62D9832B261A39B6191A8 /* Pods_PuckDrop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PuckDrop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABA695C93AFC9EA1ECF57801 /* Pods-PuckDrop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PuckDrop.debug.xcconfig"; path = "Target Support Files/Pods-PuckDrop/Pods-PuckDrop.debug.xcconfig"; sourceTree = "<group>"; };
 		DF52861928171A320059C80F /* PuckDrop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PuckDrop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF52861C28171A320059C80F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DF52861E28171A320059C80F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DF52862028171A320059C80F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DF52862028171A320059C80F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DF52862328171A320059C80F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DF52862528171A390059C80F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF52862828171A390059C80F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DF52862A28171A390059C80F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF75061228171E4500FB35D8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFD22CDEC0FA049B42D5CB4F /* Pods_PuckDrop.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B48C383EAF48BB71C91D0C0E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ABA695C93AFC9EA1ECF57801 /* Pods-PuckDrop.debug.xcconfig */,
+				1CEC8CA03BA0778E0F8861E9 /* Pods-PuckDrop.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		DF52861028171A320059C80F = {
 			isa = PBXGroup;
 			children = (
 				DF52861B28171A320059C80F /* PuckDrop */,
 				DF52861A28171A320059C80F /* Products */,
+				B48C383EAF48BB71C91D0C0E /* Pods */,
+				EACFB2629882B20D670F391D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +76,22 @@
 			children = (
 				DF52861C28171A320059C80F /* AppDelegate.swift */,
 				DF52861E28171A320059C80F /* SceneDelegate.swift */,
-				DF52862028171A320059C80F /* ViewController.swift */,
+				DF52862028171A320059C80F /* LoginViewController.swift */,
 				DF52862228171A320059C80F /* Main.storyboard */,
 				DF52862528171A390059C80F /* Assets.xcassets */,
 				DF52862728171A390059C80F /* LaunchScreen.storyboard */,
 				DF52862A28171A390059C80F /* Info.plist */,
+				DF75061228171E4500FB35D8 /* GoogleService-Info.plist */,
 			);
 			path = PuckDrop;
+			sourceTree = "<group>";
+		};
+		EACFB2629882B20D670F391D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8DC62D9832B261A39B6191A8 /* Pods_PuckDrop.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +101,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DF52862D28171A390059C80F /* Build configuration list for PBXNativeTarget "PuckDrop" */;
 			buildPhases = (
+				D7EBC64F922A2DC698424F33 /* [CP] Check Pods Manifest.lock */,
 				DF52861528171A320059C80F /* Sources */,
 				DF52861628171A320059C80F /* Frameworks */,
 				DF52861728171A320059C80F /* Resources */,
+				F17DDB4666023B4790A1D85A /* [CP] Embed Pods Frameworks */,
+				531E8898D2B02726E14E4D53 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -126,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF52862928171A390059C80F /* LaunchScreen.storyboard in Resources */,
+				DF75061328171E4500FB35D8 /* GoogleService-Info.plist in Resources */,
 				DF52862628171A390059C80F /* Assets.xcassets in Resources */,
 				DF52862428171A320059C80F /* Main.storyboard in Resources */,
 			);
@@ -133,12 +164,71 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		531E8898D2B02726E14E4D53 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PuckDrop/Pods-PuckDrop-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PuckDrop/Pods-PuckDrop-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PuckDrop/Pods-PuckDrop-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D7EBC64F922A2DC698424F33 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PuckDrop-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F17DDB4666023B4790A1D85A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PuckDrop/Pods-PuckDrop-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PuckDrop/Pods-PuckDrop-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PuckDrop/Pods-PuckDrop-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DF52861528171A320059C80F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF52862128171A320059C80F /* ViewController.swift in Sources */,
+				DF52862128171A320059C80F /* LoginViewController.swift in Sources */,
 				DF52861D28171A320059C80F /* AppDelegate.swift in Sources */,
 				DF52861F28171A320059C80F /* SceneDelegate.swift in Sources */,
 			);
@@ -284,6 +374,7 @@
 		};
 		DF52862E28171A390059C80F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ABA695C93AFC9EA1ECF57801 /* Pods-PuckDrop.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -312,6 +403,7 @@
 		};
 		DF52862F28171A390059C80F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1CEC8CA03BA0778E0F8861E9 /* Pods-PuckDrop.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
