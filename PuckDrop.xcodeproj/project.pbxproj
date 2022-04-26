@@ -14,9 +14,9 @@
 		DF52862628171A390059C80F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF52862528171A390059C80F /* Assets.xcassets */; };
 		DF52862928171A390059C80F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF52862728171A390059C80F /* LaunchScreen.storyboard */; };
 		DF75061328171E4500FB35D8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DF75061228171E4500FB35D8 /* GoogleService-Info.plist */; };
-		DF7C6D2E28172D5500C52A55 /* RinkListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7C6D2D28172D5200C52A55 /* RinkListViewController.swift */; };
-		DF7C6D3028172FBF00C52A55 /* RinkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7C6D2F28172FBE00C52A55 /* RinkTableViewCell.swift */; };
-		DF7C6D32281732C000C52A55 /* RinkDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7C6D31281732C000C52A55 /* RinkDetailViewController.swift */; };
+		DF7C6D2E28172D5500C52A55 /* SportListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7C6D2D28172D5200C52A55 /* SportListViewController.swift */; };
+		DF7C6D3028172FBF00C52A55 /* SportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7C6D2F28172FBE00C52A55 /* SportTableViewCell.swift */; };
+		DF7C6D32281732C000C52A55 /* SportDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7C6D31281732C000C52A55 /* SportDetailViewController.swift */; };
 		DFD22CDEC0FA049B42D5CB4F /* Pods_PuckDrop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC62D9832B261A39B6191A8 /* Pods_PuckDrop.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,9 +33,9 @@
 		DF52862828171A390059C80F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DF52862A28171A390059C80F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF75061228171E4500FB35D8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		DF7C6D2D28172D5200C52A55 /* RinkListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RinkListViewController.swift; sourceTree = "<group>"; };
-		DF7C6D2F28172FBE00C52A55 /* RinkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RinkTableViewCell.swift; sourceTree = "<group>"; };
-		DF7C6D31281732C000C52A55 /* RinkDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RinkDetailViewController.swift; sourceTree = "<group>"; };
+		DF7C6D2D28172D5200C52A55 /* SportListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportListViewController.swift; sourceTree = "<group>"; };
+		DF7C6D2F28172FBE00C52A55 /* SportTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportTableViewCell.swift; sourceTree = "<group>"; };
+		DF7C6D31281732C000C52A55 /* SportDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,9 +83,9 @@
 				DF52861C28171A320059C80F /* AppDelegate.swift */,
 				DF52861E28171A320059C80F /* SceneDelegate.swift */,
 				DF52862028171A320059C80F /* LoginViewController.swift */,
-				DF7C6D2D28172D5200C52A55 /* RinkListViewController.swift */,
-				DF7C6D2F28172FBE00C52A55 /* RinkTableViewCell.swift */,
-				DF7C6D31281732C000C52A55 /* RinkDetailViewController.swift */,
+				DF7C6D2D28172D5200C52A55 /* SportListViewController.swift */,
+				DF7C6D2F28172FBE00C52A55 /* SportTableViewCell.swift */,
+				DF7C6D31281732C000C52A55 /* SportDetailViewController.swift */,
 				DF52862228171A320059C80F /* Main.storyboard */,
 				DF52862528171A390059C80F /* Assets.xcassets */,
 				DF52862728171A390059C80F /* LaunchScreen.storyboard */,
@@ -239,10 +239,10 @@
 			files = (
 				DF52862128171A320059C80F /* LoginViewController.swift in Sources */,
 				DF52861D28171A320059C80F /* AppDelegate.swift in Sources */,
-				DF7C6D2E28172D5500C52A55 /* RinkListViewController.swift in Sources */,
-				DF7C6D32281732C000C52A55 /* RinkDetailViewController.swift in Sources */,
+				DF7C6D2E28172D5500C52A55 /* SportListViewController.swift in Sources */,
+				DF7C6D32281732C000C52A55 /* SportDetailViewController.swift in Sources */,
 				DF52861F28171A320059C80F /* SceneDelegate.swift in Sources */,
-				DF7C6D3028172FBF00C52A55 /* RinkTableViewCell.swift in Sources */,
+				DF7C6D3028172FBF00C52A55 /* SportTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

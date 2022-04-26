@@ -1,5 +1,5 @@
 //
-//  RinkDetailViewController.swift
+//  SportDetailViewController.swift
 //  PuckDrop
 //
 //  Created by Pace Williams on 4/25/22.
@@ -7,8 +7,10 @@
 
 import UIKit
 
-class RinkDetailViewController: UIViewController {
-
+class SportDetailViewController: UIViewController {
+    @IBOutlet weak var nameLabel: UITextField!
+    
+    @IBOutlet weak var sportImage: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,6 +25,8 @@ class RinkDetailViewController: UIViewController {
         }
     }
     
-   
+    @IBAction func addEventButtonPressed(_ sender: UIBarButtonItem) {
+    }
+    
 
 }
