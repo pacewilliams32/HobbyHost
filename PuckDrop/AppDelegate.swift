@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import GooglePlaces
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -28,6 +29,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
              UIToolbar.appearance().standardAppearance = coloredAppearanceToolbar
              UIToolbar.appearance().scrollEdgeAppearance = coloredAppearanceToolbar
         FirebaseApp.configure()
+        GMSPlacesClient.provideAPIKey(APIKeys.googlePlacesKey)
+        
         return true
     }
 

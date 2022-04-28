@@ -7,15 +7,26 @@
 
 import UIKit
 
+var sports = ["Hockey", "Football", "Wiffleball", "Softball", "Baseball", "Soccer", "Basketball", "Golf", "Bowling", "Tennis"]
+
 class SportListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
-    var sports = ["Hockey", "Football", "Wiffleball", "Softball", "Baseball", "Soccer", "Basketball", "Golf", "Bowling", "Tennis"]
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowDetail" {
+            let destination = segue.destination as! SportDetailViewController
+            let selectedIndexPath = tableView.indexPathForSelectedRow!
+            destination.sportName = sports[selectedIndexPath.row]
+        }
         
     }
     

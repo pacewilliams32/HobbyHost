@@ -13,10 +13,16 @@
 		DF52862428171A320059C80F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF52862228171A320059C80F /* Main.storyboard */; };
 		DF52862628171A390059C80F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF52862528171A390059C80F /* Assets.xcassets */; };
 		DF52862928171A390059C80F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF52862728171A390059C80F /* LaunchScreen.storyboard */; };
+		DF6FC9CB2819CA0500754DF2 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6FC9CA2819CA0400754DF2 /* Events.swift */; };
 		DF75061328171E4500FB35D8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DF75061228171E4500FB35D8 /* GoogleService-Info.plist */; };
 		DF7C6D2E28172D5500C52A55 /* SportListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7C6D2D28172D5200C52A55 /* SportListViewController.swift */; };
 		DF7C6D3028172FBF00C52A55 /* SportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7C6D2F28172FBE00C52A55 /* SportTableViewCell.swift */; };
 		DF7C6D32281732C000C52A55 /* SportDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7C6D31281732C000C52A55 /* SportDetailViewController.swift */; };
+		DF7C6D3428188F2500C52A55 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7C6D3328188F2400C52A55 /* Event.swift */; };
+		DF7C6D3628189C9900C52A55 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7C6D3528189C9800C52A55 /* EventDetailViewController.swift */; };
+		DF7C6D382818A62500C52A55 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7C6D372818A62500C52A55 /* APIKeys.swift */; };
+		DF7C6D3C2818C68100C52A55 /* UIViewController+alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7C6D3B2818C67E00C52A55 /* UIViewController+alert.swift */; };
+		DF7C6D3E2818CA7400C52A55 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7C6D3D2818CA7400C52A55 /* EventTableViewCell.swift */; };
 		DFD22CDEC0FA049B42D5CB4F /* Pods_PuckDrop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC62D9832B261A39B6191A8 /* Pods_PuckDrop.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,10 +38,16 @@
 		DF52862528171A390059C80F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF52862828171A390059C80F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DF52862A28171A390059C80F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF6FC9CA2819CA0400754DF2 /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
 		DF75061228171E4500FB35D8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DF7C6D2D28172D5200C52A55 /* SportListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportListViewController.swift; sourceTree = "<group>"; };
 		DF7C6D2F28172FBE00C52A55 /* SportTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportTableViewCell.swift; sourceTree = "<group>"; };
 		DF7C6D31281732C000C52A55 /* SportDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportDetailViewController.swift; sourceTree = "<group>"; };
+		DF7C6D3328188F2400C52A55 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		DF7C6D3528189C9800C52A55 /* EventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
+		DF7C6D372818A62500C52A55 /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
+		DF7C6D3B2818C67E00C52A55 /* UIViewController+alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+alert.swift"; path = "../../Snacktacular/Snacktacular/UIViewController+alert.swift"; sourceTree = "<group>"; };
+		DF7C6D3D2818CA7400C52A55 /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,10 +94,16 @@
 			children = (
 				DF52861C28171A320059C80F /* AppDelegate.swift */,
 				DF52861E28171A320059C80F /* SceneDelegate.swift */,
+				DF7C6D3328188F2400C52A55 /* Event.swift */,
+				DF6FC9CA2819CA0400754DF2 /* Events.swift */,
 				DF52862028171A320059C80F /* LoginViewController.swift */,
 				DF7C6D2D28172D5200C52A55 /* SportListViewController.swift */,
 				DF7C6D2F28172FBE00C52A55 /* SportTableViewCell.swift */,
 				DF7C6D31281732C000C52A55 /* SportDetailViewController.swift */,
+				DF7C6D3D2818CA7400C52A55 /* EventTableViewCell.swift */,
+				DF7C6D3528189C9800C52A55 /* EventDetailViewController.swift */,
+				DF7C6D372818A62500C52A55 /* APIKeys.swift */,
+				DF7C6D3B2818C67E00C52A55 /* UIViewController+alert.swift */,
 				DF52862228171A320059C80F /* Main.storyboard */,
 				DF52862528171A390059C80F /* Assets.xcassets */,
 				DF52862728171A390059C80F /* LaunchScreen.storyboard */,
@@ -237,11 +255,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF6FC9CB2819CA0500754DF2 /* Events.swift in Sources */,
 				DF52862128171A320059C80F /* LoginViewController.swift in Sources */,
+				DF7C6D3E2818CA7400C52A55 /* EventTableViewCell.swift in Sources */,
 				DF52861D28171A320059C80F /* AppDelegate.swift in Sources */,
 				DF7C6D2E28172D5500C52A55 /* SportListViewController.swift in Sources */,
+				DF7C6D382818A62500C52A55 /* APIKeys.swift in Sources */,
 				DF7C6D32281732C000C52A55 /* SportDetailViewController.swift in Sources */,
 				DF52861F28171A320059C80F /* SceneDelegate.swift in Sources */,
+				DF7C6D3428188F2500C52A55 /* Event.swift in Sources */,
+				DF7C6D3C2818C68100C52A55 /* UIViewController+alert.swift in Sources */,
+				DF7C6D3628189C9900C52A55 /* EventDetailViewController.swift in Sources */,
 				DF7C6D3028172FBF00C52A55 /* SportTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
