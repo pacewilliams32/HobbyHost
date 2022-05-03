@@ -7,47 +7,68 @@
 
 import Foundation
 import Firebase
+import MapKit
 
-class Event  {
+class Event: NSObject, MKAnnotation {
     var eventTitle: String
     var locationName: String
     var address: String
+    var coordinate: CLLocationCoordinate2D
     var descriptionText: String
     var date: String
     var postingUserID: String
     var documentID: String
     
     var dictionary: [String: Any] {
-        return ["eventTitle": eventTitle, "locationName": locationName, "address": address, "descriptionText": descriptionText, "date": date, "postingUserID": postingUserID]
+        return ["eventTitle": eventTitle, "locationName": locationName, "address": address, "latitude": latitude, "longitude": longitude, "descriptionText": descriptionText, "date": date, "postingUserID": postingUserID]
+    }
+    
+    var latitude: CLLocationDegrees {
+        return coordinate.latitude
+    }
+    var longitude: CLLocationDegrees {
+        return coordinate.longitude
     }
     
     
+    var title: String? {
+        return locationName
+    }
     
-    init(eventTitle: String, locationName: String, address: String, descriptionText: String, date: String, postingUserID: String, documentID: String) {
+    var subtitle: String? {
+        return address
+    }
+    
+    
+    init(eventTitle: String, locationName: String, address: String, coordinate: CLLocationCoordinate2D, descriptionText: String, date: String, postingUserID: String, documentID: String) {
 
         self.eventTitle = eventTitle
         self.locationName = locationName
         self.address = address
+        self.coordinate = coordinate
         self.descriptionText = descriptionText
         self.date = date
         self.postingUserID = postingUserID
         self.documentID = documentID
     }
     
-    convenience init() {
+    override convenience init() {
         let postingUserID = Auth.auth().currentUser?.uid ?? ""
-        self.init(eventTitle: "", locationName: "", address: "", descriptionText: "", date: "", postingUserID: postingUserID, documentID: "")
+        self.init(eventTitle: "", locationName: "", address: "", coordinate: CLLocationCoordinate2D(), descriptionText: "", date: "", postingUserID: postingUserID, documentID: "")
     }
     
     convenience init(dictionary: [String: Any]) {
         let eventTitle = dictionary["eventTitle"] as! String? ?? ""
         let locationName = dictionary["locationName"] as! String? ?? ""
         let address = dictionary["address"] as! String? ?? ""
+        let latitude = dictionary["latitude"] as! Double? ?? 0.0
+        let longitude = dictionary["longitude"] as! Double? ?? 0.0
+        let coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
         let descriptionText = dictionary["descriptionText"] as! String? ?? ""
         let date = dictionary["date"] as! String? ?? ""
         let postingUserID = dictionary["postingUserID"] as! String? ?? ""
         
-        self.init(eventTitle: eventTitle, locationName: locationName, address: address, descriptionText: descriptionText, date: date, postingUserID: postingUserID, documentID: "")
+        self.init(eventTitle: eventTitle, locationName: locationName, address: address, coordinate: coordinate, descriptionText: descriptionText, date: date, postingUserID: postingUserID, documentID: "")
 
     }
     

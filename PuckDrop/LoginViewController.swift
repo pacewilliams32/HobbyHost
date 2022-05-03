@@ -66,8 +66,8 @@ extension LoginViewController: FUIAuthDelegate {
         // Create an instance of the FirebaseAuth login view controller
         let loginViewController = FUIAuthPickerViewController(authUI: authUI)
 
-        // Set background color to white
-        loginViewController.view.backgroundColor = UIColor.white
+        // Set background color to black
+        loginViewController.view.backgroundColor = UIColor.black
         loginViewController.view.subviews[0].backgroundColor = UIColor.clear
         loginViewController.view.subviews[0].subviews[0].backgroundColor = UIColor.clear
 
@@ -82,7 +82,7 @@ extension LoginViewController: FUIAuthDelegate {
 
         // Create the UIImageView using the frame created above & add the "logo" image
         let logoImageView = UIImageView(frame: logoFrame)
-        logoImageView.image = UIImage(named: "PuckDropLogo")
+        logoImageView.image = UIImage(named: "HobbyHost")
         logoImageView.contentMode = .scaleAspectFit // Set imageView to Aspect Fit
         loginViewController.view.addSubview(logoImageView) // Add ImageView to the login controller's main view
         return loginViewController

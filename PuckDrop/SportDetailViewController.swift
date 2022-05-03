@@ -36,23 +36,12 @@ class SportDetailViewController: UIViewController {
         
         eventTableView.delegate = self
         eventTableView.dataSource = self
-        configureSegmentedControl()
         
         
         
     }
     
-    func configureSegmentedControl() {
-        // set font colors for segmented control
-        let blueFontColor = [NSAttributedString.Key.foregroundColor: UIColor(named: "PrimaryColor") ?? UIColor.blue]
-        let blackFontColor = [NSAttributedString.Key.foregroundColor: UIColor.black]
-        sortSegmentedControl.setTitleTextAttributes(blueFontColor, for: .selected)
-        sortSegmentedControl.setTitleTextAttributes(blackFontColor, for: .normal)
-
-        // add white border to segmented control
-        sortSegmentedControl.layer.borderColor = UIColor.black.cgColor
-        sortSegmentedControl.layer.borderWidth = 1.0
-    }
+   
     
    
     
@@ -69,8 +58,9 @@ class SportDetailViewController: UIViewController {
             destination.locationName = events.eventArray[selectedIndexPath.row].locationName
             destination.address = events.eventArray[selectedIndexPath.row].address
             destination.descriptionText = events.eventArray[selectedIndexPath.row].descriptionText
-            
-            
+            destination.coordinate = events.eventArray[selectedIndexPath.row].coordinate
+            destination.date = events.eventArray[selectedIndexPath.row].date
+            //destination.dateLabel.isHidden = true
         }
     }
     

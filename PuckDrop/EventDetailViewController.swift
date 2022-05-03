@@ -1,12 +1,13 @@
 //
 //  EventDetailViewController.swift
-//  PuckDrop
+//  HobbyHost
 //
 //  Created by Pace Williams on 4/26/22.
 //
 
 import UIKit
 import GooglePlaces
+import MapKit
 
 private let dateFormatter: DateFormatter = {
     let dateFormatter = DateFormatter()
@@ -21,9 +22,13 @@ class EventDetailViewController: UIViewController {
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var dateLabel: UIDatePicker!
+    @IBOutlet weak var mapView: MKMapView!
     
+    @IBOutlet weak var saveBarButton: UIBarButtonItem!
     
+    @IBOutlet weak var dateText: UILabel!
     
+    @IBOutlet weak var locationButton: UIBarButtonItem!
     var event: Event!
     var sportName: String!
     var eventTitle: String!
@@ -31,29 +36,54 @@ class EventDetailViewController: UIViewController {
     var address: String!
     var descriptionText: String!
     var date: String!
+    var coordinate: CLLocationCoordinate2D!
+    
+    let regionDistance: CLLocationDegrees = 750.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        dateLabel.minimumDate = Date()
+        
+        
         
         if event == nil {
             event = Event()
             
         }
         
-        updateUserInterface()
+        if eventTitle != nil {
+            disableTextEditing()
+            setupMapView()
+            mapView.setCenter(coordinate, animated: true)
+            saveBarButton.isEnabled = false
+            locationButton.isEnabled = false
+            updateUserInterface()
+        } else {
+            setupMapView()
+            updateUserInterface()
+            dateText.text = ""
+        }
     }
     
-
+    func setupMapView() {
+        let region = MKCoordinateRegion(center: event.coordinate, latitudinalMeters: regionDistance, longitudinalMeters: regionDistance)
+        mapView.setRegion(region, animated: true)
+    }
+    
     
     func updateUserInterface() {
         eventTextField.text = eventTitle  //event.eventTitle
         venueLabel.text = locationName//event.locationName
         addressLabel.text = address //event.address
         descriptionTextView.text = descriptionText //event.description
+        dateText.text = date
         
         
-        
+    }
+    
+    func updateMap() {
+        mapView.removeAnnotations(mapView.annotations)
+        mapView.addAnnotation(event)
+        mapView.setCenter(event.coordinate, animated: true)
     }
     
     func updateFromInterface() {
@@ -62,8 +92,13 @@ class EventDetailViewController: UIViewController {
         event.address = addressLabel.text!
         event.descriptionText = descriptionTextView.text!
         event.date = date
-        
-
+    }
+    func disableTextEditing() {
+        eventTextField.isEnabled = false
+        venueLabel.isEnabled = false
+        addressLabel.isEnabled = false
+        descriptionTextView.isEditable = false
+        dateLabel.isHidden = true
         
     }
     
@@ -84,17 +119,16 @@ class EventDetailViewController: UIViewController {
     
     
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
-        
         updateFromInterface()
         event.saveData(name: sportName) { (success) in
             if success {
-
+                
                 self.leaveViewController()
             } else {
                 self.oneButtonAlert(title: "Save Failed", message: "For some reason, the data would not save to the cloud.")
             }
         }
-
+        
     }
     
     @IBAction func addLocationButtonPressed(_ sender: UIBarButtonItem) {
@@ -106,7 +140,7 @@ class EventDetailViewController: UIViewController {
     
     @IBAction func datePicker(_ sender: UIDatePicker) {
         date = dateFormatter.string(from: sender.date)
-       
+        
     }
 }
 
@@ -118,9 +152,10 @@ extension EventDetailViewController: GMSAutocompleteViewControllerDelegate {
         
         locationName = place.name ?? "Unknown Address"
         address = place.formattedAddress ?? "Unknown Address"
+        event.coordinate = place.coordinate
         
         updateUserInterface()
-        
+        updateMap()
         
         dismiss(animated: true, completion: nil)
     }
